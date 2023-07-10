@@ -20,6 +20,9 @@ app.use(express.json())
 
 
 // Rutas 
+app.get("/", (req,res)=>{
+    res.status(200).json({bienvenida:"Bienvenido a la API de veterinary management",documentacion:"Porvafor revisa la documentacion"})
+}) 
 app.use('/api',routerVeterinarios)
 app.use('/api',routerPacientes)
 

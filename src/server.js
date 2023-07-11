@@ -20,6 +20,7 @@ app.use(express.json())
 
 
 // Rutas 
+app.use((req,res)=>res.status(200).send("Bienvenido a la api")) 
 app.use('/api',routerVeterinarios)
 app.use('/api',routerPacientes)
 
